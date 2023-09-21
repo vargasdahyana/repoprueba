@@ -1,0 +1,36 @@
+body{
+    background-color: rgb(16, 114, 121);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.tarjeta div{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    backface-visibility: hidden;
+    transition: 1s;
+    
+    
+}
+
+.tarjeta .frente{
+    background-color: rgb(180, 67, 190);
+    width: 300px;
+    height: 300px;
+    border: 3px solid rgb(77, 14, 77);
+    transform: perspective(500px) rotateY(0deg);
+}
+.tarjeta .dorso{
+    width: 300px;
+    height: 300px;
+    border: 3px solid rgb(33, 95, 18);
+    transform: perspective(500px) rotateY(180deg);
+}
+.tarjeta:hover .frente{
+    transform: perspective(500px) rotateY(180deg);
+}
+.tarjeta:hover .dorso{
+    transform: perspective(500px) rotateY(360deg);
+}
